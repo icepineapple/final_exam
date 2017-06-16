@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <h1>成績列表</h1>
-<%= link_to '新增學生', new_score_path %>
+<%= link_to '新增學生', new_score_path, class:"btn btn-success btn-xs" %>
 
-<table>
+ <table class="table">
   <thead>
     <tr>
       <th>姓名</th>
@@ -21,8 +21,8 @@
         <td><%= score.number %></td>
         <td><%= score.grade %></td>
         <td><%= score.process %></td>
-        <td><%= link_to '編輯', edit_score_path(score) %></td>
-        <td><%= link_to '刪除', score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '編輯', edit_score_path(score), class:"btn btn-success btn-xs" %></td>
+        <td><%= link_to '刪除', score, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger btn-xs" %></td>
       </tr>
     <% end %>
   </tbody>
